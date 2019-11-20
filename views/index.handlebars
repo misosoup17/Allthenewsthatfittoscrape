@@ -1,24 +1,21 @@
-{{!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
-    <span class="navbar-brand mb-1 h1">All the Coding Questions That's Fit to Scrape</span>
-</nav>
-<div id="wrapper">
-    <h1>Questions</h1>
-    <h2><i></i></h2>
-    <div class="container">
-        {{!-- <div id="questions"></div> --}}
-        <ul>
-            {{#each questions}}
-            <li>
-                <p><span class="label">Title:</span> {{this.title}}</p>
-                <p><span class="label">Link:</span> {{this.link}}</p>
-            </li>
-            {{/each}}
-        </ul>
-        <div id="notes"></div>
-    </div>
-    <br>
-    <br>
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1"></span>
-    </nav>
-</div> --}}
+<body class="container">
+  <h3 class="header">Mongo Scraper</h3>
+  <div id="buttons">
+    <button class="btn" id="headline-sort">Sort By Headline</button>
+     {{!-- <button class="btn" id="more-articles">Get New Articles</button> --}}
+    
+  </div>
+  <table id="results">
+    <thead>
+      <tr>
+        <th id="title">Title</th>
+        <th id="link">Link</th>
+        <th id="image">Image</th>
+        <th id="summary">Summary</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <!-- Results from DB here -->
+    </tbody>
+  </table>
+  <script src="app.js"></script>

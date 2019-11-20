@@ -1,20 +1,3 @@
-// function displayResults(scrapedData) {
-//   // First, empty the table
-//   $("#tbody").empty();
-//   // Then, for each entry of that json...
-//   scrapedData.forEach(function(articles) {
-//     // Append each property to the table
-//     var tr = $("<tr>").append(
-//       $("<td>").text(articles.title),
-//       $("<td>").text(articles.link),
-//       $("<td>").text(articles.image),
-//       $("<td>").text(articles.summary)
-//     );
-
-//     $("#tbody").append(tr);
-//   });
-// }
-
 $.getJSON("/all", function(data){
   console.log(data);
   for (var i = 0; i < data.length; i++){

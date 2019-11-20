@@ -11,13 +11,8 @@ app.use(express.static("public"));
 
 
 // Set Handlebars as the default templating engine.
-var path = require('path')
-
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
-app.set('views', path.join(__dirname,'views'))
 
 // Database configuration
 var collections = ["scrapedData"];
@@ -31,7 +26,6 @@ db.on("error", function (error) {
 // Main route, render index.handlebars
 app.get("/", function(req, res) {
   res.render("index");
-  
 })
 
 // Make a request via axios to grab the HTML body from the site of your choice

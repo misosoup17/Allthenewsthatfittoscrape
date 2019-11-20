@@ -1,25 +1,29 @@
 {
-  "name": "all-the-news-that-s-fit-to-scrape",
+  "name": "allthenewsthatfittoscrape",
   "version": "1.0.0",
-  "description": "web app that lets users view and leave comments on the latest news scraped from another site.",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.1",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongojs": "^3.1.0",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-   
+    "url": "git+https://github.com/misosoup17/Allthenewsthatfittoscrape.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-
-  "dependencies": {
-    "axios": "^0.18.0",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "mongojs": "^2.6.0",
-    "mongoose": "^5.4.13"
-  }
+    "url": "https://github.com/misosoup17/Allthenewsthatfittoscrape/issues"
+  },
+  "homepage": "https://github.com/misosoup17/Allthenewsthatfittoscrape#readme"
 }

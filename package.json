@@ -8,14 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smentzer/All-the-News-That-s-Fit-to-Scrape.git"
+   
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smentzer/All-the-News-That-s-Fit-to-Scrape/issues"
-  },
-  "homepage": "https://github.com/smentzer/All-the-News-That-s-Fit-to-Scrape#readme",
+
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",

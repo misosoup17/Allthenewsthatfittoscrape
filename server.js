@@ -34,14 +34,13 @@ app.get("/scrape", function (req, res) {
   db.scrapedData.drop()
 
   axios
-    .get("https://kotaku.com/")
-    .then(function (response) {
+    .get("https://kotaku.com/").then(function (response) {
       // Load the HTML into cheerio and save it to a variable
       // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
       var $ = cheerio.load(response.data);
 
       // An empty array to save the data that we'll scrape
-      var results = [];
+      var results = {};
 
       // Select each element in the HTML body from which you want information.
       // NOTE: Cheerio selectors function similarly to jQuery's selectors,
@@ -93,16 +92,18 @@ app.get("/scrape", function (req, res) {
 
 
 // route 1
-app.get("/all", function (req, res) {
-  db.scrapedData.find({}, function (err, found) {
-    if (err) {
-      console.log(err)
-    } else {
-      res.json(found)
-    }
+app.get("/articles", function (req, res) {
+    // Grab every document in the Articles collection
+    db.Article.find({})
+      .then(function (dbArticle) {
+        // If we were able to successfully find Articles, send them back to the client
+        res.json(dbArticle);
+      })
+      .catch(function (err) {
+        // If an error occurred, send it to the client
+        res.json(err);
+      });
   });
-});
-
 
 //title route 
 app.get("/title", function(req, res) {

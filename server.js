@@ -45,7 +45,7 @@ Handlebars.registerHelper("isSaved", function (saved) {
 mongoose.Promise = Promise;
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://alex:OrangE32@ds147411.mlab.com:47411/heroku_59fgdfg5"
 
- mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+ mongoose.connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true });
 
 // Start the server
 app.listen(PORT, function () {

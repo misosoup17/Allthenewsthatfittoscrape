@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express.Router();
-var db = require('../models/')
+var db = require('../models')
 
 var axios = require("axios");
 var cheerio = require("cheerio");

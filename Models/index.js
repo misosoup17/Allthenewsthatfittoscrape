@@ -1,5 +1,5 @@
 module.exports = {
-    Article: require("./Article"),
-    Note: require("./Note"),
-    Scrape: require("./Scrape")
+    Article: require("./articles"),
+    Note: require("./notes"),
+    Scrape: require("./scrape")
   };

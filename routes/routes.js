@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
         db.Scrape.create(result)
           .then(function (dbArticle) {
             // View the added result in the console
-            res.redirect("/scrapes");
+            res.redirect("/scrape");
             console.log(dbArticle);
           })
           .catch(function (err) {
@@ -46,8 +46,8 @@ app.get("/", (req, res) => {
   });
   
   // Route for getting all scraped Articles from the db and displaying in articles.handlebars 
-  app.get("/scrapes", function (req, res) {
-    console.log("app.get/scrapes");
+  app.get("/scrape", function (req, res) {
+    console.log("app.get/scrape");
     // Grab every document in the Articles collection
     db.Scrape.find({})
       .then(function (data) {
@@ -132,7 +132,7 @@ app.get("/", (req, res) => {
           article: data,
           note: data.notes
         }
-        res.render('article', results);
+        res.render('articles', results);
       })
       .catch(function (err) {
         // If an error occurred, send it to the client
@@ -167,7 +167,7 @@ app.get("/", (req, res) => {
   
         }
         // If we were able to successfully update an Article, send it back to the client
-        res.render('article', results);
+        res.render('articles', results);
       })
       .catch(function (err) {
         // If an error occurred, send it to the client

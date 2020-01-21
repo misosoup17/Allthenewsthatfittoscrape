@@ -43,7 +43,7 @@ Handlebars.registerHelper("isSaved", function (saved) {
 });
 
 mongoose.Promise = Promise;
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://alex:OrangE32@ds147411.mlab.com:47411/heroku_59fgdfg5"
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://reactnews-shard-00-01-wz5wb.mongodb.net:27017,reactnews-shard-00-02-wz5wb.mongodb.net:27017,reactnews-shard-00-00-wz5wb.mongodb.net:27017/test?authSource=admin&compressors=disabled&gssapiServiceName=mongodb&replicaSet=ReactNews-shard-0&ssl=true"
 
  mongoose.connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true });
 
